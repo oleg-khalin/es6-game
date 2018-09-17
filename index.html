@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.game {
+			height: 100vh;
+			background-image: url(http://www.omlogic.com/images/vivo-ipl-bg.png);
+			background-size: cover;
+			padding: 50px;
+			box-sizing: border-box;
+		}
+		.game-controllers {
+			display: flex;
+			background-color: rgba(255,255,255,.6);
+			padding: 20px 100px;
+			border-radius: 3em;
+			justify-content: space-between;
+		}
+		.game-controllers-item {
+			text-align: center;
+			font-size: 24px;
+		}
+		.game-controllers-item-value {
+			font-weight: bold;
+			font-size: 38px;
+			margin-top: 5px;
+		}
+		.game-controllers-item-bonus {
+			width: 15px;
+			height: 15px;
+			border-radius: 5em;
+			background-color: rgba(255,255,255,.3);
+			display: inline-block;
+			margin: auto 2px;
+		}
+		.game-controllers-item-bonus-active {
+			background-color: #fff;
+		}
+		.game-question {
+			margin-top: 250px;
+			font-size: 150px;
+			text-align: center;
+			color: #fff;
+		}
+		.game-answers {
+			display: flex;
+			padding: 20px 250px;
+			justify-content: space-around;
+			margin-top: 50px;
+		}
+		.game-answers-item {
+			background-color: rgba(255,255,255,.4);
+			text-align: center;
+			font-size: 40px;
+			padding: 30px;
+			border: none;
+			border-radius: .5em;
+			cursor: pointer;
+			transition: all .3s ease;
+		}
+		.game-answers-item:disabled {
+			cursor: wait;
+		}
+		.game-answers-item.success {
+			background-color: lightgreen;
+		}
+		.game-answers-item.error {
+			background-color: salmon;
+		}
+		.game-answers-item.success:hover {
+			background-color: lightgreen;
+		}
+		.game-answers-item.error:hover {
+			background-color: salmon;
+		}
+		.game-answers-item:hover {
+			background-color: rgba(255,255,255,.8);
+		}
+	</style>
+</head>
+<body>
+	<div class="game">
+		<div class="game-controllers">
+			<div class="game-controllers-item">
+				<div class="game-controllers-item-label">Время</div>
+				<div class="game-controllers-item-value time">00:48</div>
+			</div>
+			<div class="game-controllers-item">
+				<div class="game-controllers-item-label">Уровень</div>
+				<div class="game-controllers-item-value">1-1</div>
+			</div>
+			<div class="game-controllers-item">
+				<div class="game-controllers-item-label">Очки</div>
+				<div class="game-controllers-item-value sum">0</div>
+			</div>
+			<div class="game-controllers-item">
+				<div class="game-controllers-item-label">Бонус</div>
+				<div class="game-controllers-item-value">
+					<div class="game-controllers-item-bonus game-controllers-item-bonus-active"></div>
+					<div class="game-controllers-item-bonus"></div>
+					<div class="game-controllers-item-bonus"></div>
+					<div class="game-controllers-item-bonus"></div>
+					<div class="game-controllers-item-bonus"></div>
+					<span>x1</span>
+				</div>
+			</div>
+		</div>
+		<div class="game-question">
+			8 * 6
+		</div>
+		<div class="game-answers">
+			<button class="game-answers-item">48</button>
+			<button class="game-answers-item">54</button>
+			<button class="game-answers-item">36</button>
+			<button class="game-answers-item">46</button>
+			<button class="game-answers-item">44</button>
+		</div>
+	</div>
+	<script src='dist/script.js'></script>
+</body>
+</html>
